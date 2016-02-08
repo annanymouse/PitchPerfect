@@ -95,14 +95,23 @@
                                     <action selector="playFastAudio:" destination="o5N-l1-WpL" eventType="touchUpInside" id="XP9-TE-zyU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmS-fa-89C">
+                                <rect key="frame" x="70" y="217" width="100" height="100"/>
+                                <state key="normal" image="chipmunkButton"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="o5N-l1-WpL" eventType="touchUpInside" id="47n-q8-XXs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VmS-fa-89C" firstAttribute="leading" secondItem="hD1-IV-vyb" secondAttribute="leadingMargin" constant="50" id="AYR-3b-XQt"/>
                             <constraint firstItem="ck2-z5-uEn" firstAttribute="top" secondItem="aet-vN-j8n" secondAttribute="bottom" constant="30" id="CZ3-Xv-KH3"/>
                             <constraint firstItem="V1i-cj-S7b" firstAttribute="top" secondItem="aet-vN-j8n" secondAttribute="bottom" constant="30" id="PSr-gp-cP5"/>
                             <constraint firstItem="6t9-Mq-ZB2" firstAttribute="top" secondItem="EmQ-Vs-eXM" secondAttribute="bottom" constant="343" id="XOr-I9-MH5"/>
                             <constraint firstItem="ck2-z5-uEn" firstAttribute="leading" secondItem="hD1-IV-vyb" secondAttribute="leadingMargin" constant="50" id="ZTF-hl-yWr"/>
                             <constraint firstItem="EmQ-Vs-eXM" firstAttribute="centerX" secondItem="hD1-IV-vyb" secondAttribute="centerX" id="bU9-0p-amC"/>
+                            <constraint firstItem="VmS-fa-89C" firstAttribute="top" secondItem="ck2-z5-uEn" secondAttribute="bottom" constant="23" id="fBh-Rq-OMW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V1i-cj-S7b" secondAttribute="trailing" constant="50" id="tCM-pq-Fnb"/>
                         </constraints>
                     </view>
@@ -133,6 +142,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunkButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabbitButton" width="100" height="100"/>
         <image name="snailButton" width="100" height="100"/>
