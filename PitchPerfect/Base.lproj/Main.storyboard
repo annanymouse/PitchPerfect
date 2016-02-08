@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d06-Kh-bE3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -34,6 +35,7 @@
                                 <rect key="frame" x="182" y="612" width="50" height="50"/>
                                 <state key="normal" image="stopButton"/>
                                 <connections>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEs-gu-FAQ"/>
                                     <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAm-uq-ZuS"/>
                                 </connections>
                             </button>
@@ -54,6 +56,7 @@
                         <outlet property="recordButton" destination="bnw-7m-vae" id="FlR-zQ-uJx"/>
                         <outlet property="recordingInProgress" destination="gsy-jR-84e" id="1dr-c2-G0B"/>
                         <outlet property="stopButton" destination="Zhk-Qk-c3T" id="5eA-9c-fr3"/>
+                        <segue destination="o5N-l1-WpL" kind="show" identifier="stopRecording" id="BIs-3I-qZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
