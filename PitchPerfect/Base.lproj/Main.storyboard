@@ -35,8 +35,7 @@
                                 <rect key="frame" x="182" y="612" width="50" height="50"/>
                                 <state key="normal" image="stopButton"/>
                                 <connections>
-                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEs-gu-FAQ"/>
-                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAm-uq-ZuS"/>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dG-Ka-Prf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck2-z5-uEn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck2-z5-uEn">
                                 <rect key="frame" x="70" y="94" width="100" height="100"/>
                                 <state key="normal" image="snailButton"/>
                                 <connections>
@@ -89,7 +88,7 @@
                                     <action selector="stopAllAudio:" destination="o5N-l1-WpL" eventType="touchUpInside" id="tyj-TF-SBJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1i-cj-S7b">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1i-cj-S7b">
                                 <rect key="frame" x="244" y="94" width="100" height="100"/>
                                 <state key="normal" image="rabbitButton"/>
                                 <connections>

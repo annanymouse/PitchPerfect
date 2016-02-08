@@ -82,7 +82,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
     }
     
-    @IBAction func stopAudio(sender: AnyObject) {
+    @IBAction func stopAudio(sender: UIButton) {
         recordingInProgress.hidden = true
         //Inside func stopAudio(sender: UIButton)
         audioRecorder.stop()
