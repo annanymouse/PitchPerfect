@@ -20,6 +20,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordingInProgress.text = "Tap to Record"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -32,15 +33,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         //hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingInProgress.text = "Tap to Record"
+        recordingInProgress.hidden = false
     }
 
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
         stopButton.hidden = false
-        recordingInProgress.hidden = false
-        //TODO: Record the user's voice
+        recordingInProgress.text = "Recording"
         print("in recordAudio")
-        //Inside func recordAudio(sender: UIButton)
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         let recordingName = "my_audio.wav"
@@ -56,8 +57,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-        
-        
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -84,7 +83,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopAudio(sender: UIButton) {
         recordingInProgress.hidden = true
-        //Inside func stopAudio(sender: UIButton)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
