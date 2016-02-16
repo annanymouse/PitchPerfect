@@ -45,7 +45,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
         stopButton.hidden = false
-        recordingInProgress.text = "Recording"
+        recordingInProgress.text = "Recording..."
         pauseResumeButton.enabled = true
         pauseResumeButton.hidden = false
         pauseResumeButton.setBackgroundImage(UIImage(named:"pauseButton"), forState: UIControlState.Normal)
