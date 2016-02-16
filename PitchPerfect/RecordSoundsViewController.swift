@@ -14,9 +14,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var pauseResumeButton: UIButton!
     
-    var audioRecorder:AVAudioRecorder!
-    var recordedAudio:RecordedAudio!
+    var audioRecorder: AVAudioRecorder!
+    var recordedAudio: RecordedAudio!
+    var pauseResumeBool: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = true
         recordingInProgress.text = "Tap to Record"
         recordingInProgress.hidden = false
+        pauseResumeButton.setBackgroundImage(UIImage(named: "pause_80_blue.png"), forState: UIControlState.Normal)
+        pauseResumeBool = true
     }
 
     @IBAction func recordAudio(sender: UIButton) {
@@ -61,16 +65,27 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if(flag) {
-        recordedAudio = RecordedAudio()
-        recordedAudio.filePathUrl = recorder.url
-        recordedAudio.title = recorder.url.lastPathComponent
-        self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent!)
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else {
             print("Recording was not successful")
             recordButton.enabled = true
             stopButton.hidden = true
         }
     }
+    
+    @IBAction func pauseResume(sender: UIButton) {
+        if (pauseResumeBool == true) {
+            audioRecorder.pause()
+            recordingInProgress.text = "Recording Paused"
+            pauseResumeButton.setBackgroundImage(UIImage(named: "resume_80_blue.png"), forState: UIControlState.Normal)
+        } else {
+        audioRecorder.record()
+        recordingInProgress.text = "Recording Resumed"
+        pauseResumeButton.setBackgroundImage(UIImage(named: "pause_80_blue.png"), forState: UIControlState.Normal)
+        }
+    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "stopRecording") {
