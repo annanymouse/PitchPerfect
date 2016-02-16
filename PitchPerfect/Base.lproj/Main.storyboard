@@ -38,9 +38,8 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w7F-0X-T0x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxz-cm-eKH">
-                                <rect key="frame" x="334" y="438" width="40" height="40"/>
-                                <state key="normal" image="pauseButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxz-cm-eKH">
+                                <rect key="frame" x="344" y="438" width="30" height="34"/>
                                 <connections>
                                     <action selector="pauseResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEa-Ze-wC2"/>
                                 </connections>
@@ -183,7 +182,6 @@
         <image name="darthvaderButton" width="100" height="100"/>
         <image name="echoButton" width="80" height="80"/>
         <image name="microphone" width="100" height="100"/>
-        <image name="pauseButton" width="40" height="40"/>
         <image name="rabbitButton" width="100" height="100"/>
         <image name="reverbButton" width="80" height="80"/>
         <image name="snailButton" width="100" height="100"/>

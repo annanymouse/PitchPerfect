@@ -37,7 +37,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = true
         recordingInProgress.text = "Tap to Record"
         recordingInProgress.hidden = false
-        pauseResumeButton.setBackgroundImage(UIImage(named:"pauseButton"), forState: UIControlState.Normal)
         pauseResumeButton.hidden = true
         pauseResumeButton.enabled = false
         pauseResumeBool = true
@@ -49,6 +48,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordingInProgress.text = "Recording"
         pauseResumeButton.enabled = true
         pauseResumeButton.hidden = false
+        pauseResumeButton.setBackgroundImage(UIImage(named:"pauseButton"), forState: UIControlState.Normal)
         print("in recordAudio")
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
