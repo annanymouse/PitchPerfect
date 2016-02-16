@@ -37,7 +37,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = true
         recordingInProgress.text = "Tap to Record"
         recordingInProgress.hidden = false
-        pauseResumeButton.setBackgroundImage(UIImage(named: "pause_80_blue.png"), forState: UIControlState.Normal)
+        pauseResumeButton.setBackgroundImage(UIImage(named:"pauseButton"), forState: UIControlState.Normal)
+        pauseResumeButton.hidden = true
+        pauseResumeButton.enabled = false
         pauseResumeBool = true
     }
 
@@ -45,6 +47,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = false
         stopButton.hidden = false
         recordingInProgress.text = "Recording"
+        pauseResumeButton.enabled = true
+        pauseResumeButton.hidden = false
         print("in recordAudio")
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
@@ -72,17 +76,21 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             recordButton.enabled = true
             stopButton.hidden = true
         }
+        pauseResumeButton.hidden = true
+        pauseResumeButton.enabled = false
     }
     
     @IBAction func pauseResume(sender: UIButton) {
         if (pauseResumeBool == true) {
             audioRecorder.pause()
             recordingInProgress.text = "Recording Paused"
-            pauseResumeButton.setBackgroundImage(UIImage(named: "resume_80_blue.png"), forState: UIControlState.Normal)
+            pauseResumeButton.setBackgroundImage(UIImage(named:"resumeButton"), forState: .Normal)
+            pauseResumeBool = false
         } else {
-        audioRecorder.record()
-        recordingInProgress.text = "Recording Resumed"
-        pauseResumeButton.setBackgroundImage(UIImage(named: "pause_80_blue.png"), forState: UIControlState.Normal)
+            audioRecorder.record()
+            recordingInProgress.text = "Recording Resumed"
+            pauseResumeButton.setBackgroundImage(UIImage(named:"pauseButton"), forState: .Normal)
+            pauseResumeBool = true
         }
     }
 

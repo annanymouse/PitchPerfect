@@ -18,6 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-jR-84e">
+                                <rect key="frame" x="207" y="442" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1450980392" green="0.28235294119999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-Qk-c3T">
+                                <rect key="frame" x="40" y="438" width="50" height="50"/>
+                                <state key="normal" image="stopButton"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dG-Ka-Prf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-7m-vae">
                                 <rect key="frame" x="157" y="318" width="100" height="100"/>
                                 <state key="normal" image="microphone"/>
@@ -25,40 +38,30 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w7F-0X-T0x"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-jR-84e">
-                                <rect key="frame" x="207" y="442" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.1450980392" green="0.28235294119999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-Qk-c3T">
-                                <rect key="frame" x="112" y="509" width="50" height="50"/>
-                                <state key="normal" image="stopButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxz-cm-eKH">
+                                <rect key="frame" x="334" y="438" width="40" height="40"/>
+                                <state key="normal" image="pauseButton"/>
                                 <connections>
-                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dG-Ka-Prf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhB-r0-f6y">
-                                <rect key="frame" x="246" y="514" width="40" height="40"/>
-                                <connections>
-                                    <action selector="pauseResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H73-JU-BfE"/>
+                                    <action selector="pauseResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEa-Ze-wC2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="bnw-7m-vae" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="964-Nk-kb9"/>
+                            <constraint firstItem="Zhk-Qk-c3T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="1ms-nD-uRc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oxz-cm-eKH" secondAttribute="trailing" constant="20" id="7iw-il-8Io"/>
                             <constraint firstItem="gsy-jR-84e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BxK-lI-KyT"/>
                             <constraint firstItem="gsy-jR-84e" firstAttribute="top" secondItem="bnw-7m-vae" secondAttribute="bottom" constant="24" id="JSA-ci-la7"/>
-                            <constraint firstItem="Zhk-Qk-c3T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l9U-gA-kD8"/>
-                            <constraint firstItem="bnw-7m-vae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="leQ-db-f9T"/>
-                            <constraint firstItem="Zhk-Qk-c3T" firstAttribute="top" secondItem="gsy-jR-84e" secondAttribute="bottom" constant="50" id="sHS-K4-NGP"/>
+                            <constraint firstItem="bnw-7m-vae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KYv-7G-NPC"/>
+                            <constraint firstItem="oxz-cm-eKH" firstAttribute="top" secondItem="bnw-7m-vae" secondAttribute="bottom" constant="20" id="LLW-qz-ZWX"/>
+                            <constraint firstItem="bnw-7m-vae" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VeO-Hv-12C"/>
+                            <constraint firstItem="Zhk-Qk-c3T" firstAttribute="top" secondItem="bnw-7m-vae" secondAttribute="bottom" constant="20" id="mkZ-iC-IO4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="jG8-lX-NGg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="pauseResumeButton" destination="KhB-r0-f6y" id="USq-nT-ygp"/>
+                        <outlet property="pauseResumeButton" destination="oxz-cm-eKH" id="JdZ-ZG-fhd"/>
                         <outlet property="recordButton" destination="bnw-7m-vae" id="FlR-zQ-uJx"/>
                         <outlet property="recordingInProgress" destination="gsy-jR-84e" id="1dr-c2-G0B"/>
                         <outlet property="stopButton" destination="Zhk-Qk-c3T" id="5eA-9c-fr3"/>
@@ -180,6 +183,7 @@
         <image name="darthvaderButton" width="100" height="100"/>
         <image name="echoButton" width="80" height="80"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="pauseButton" width="40" height="40"/>
         <image name="rabbitButton" width="100" height="100"/>
         <image name="reverbButton" width="80" height="80"/>
         <image name="snailButton" width="100" height="100"/>
