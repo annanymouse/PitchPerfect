@@ -112,24 +112,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCV-dT-Te6">
-                                <rect key="frame" x="50" y="340" width="80" height="80"/>
+                                <rect key="frame" x="40" y="340" width="100" height="100"/>
                                 <state key="normal" image="echoButton"/>
                                 <connections>
                                     <action selector="playEcho:" destination="o5N-l1-WpL" eventType="touchUpInside" id="6eV-Yb-Rr0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhO-5E-gEo">
-                                <rect key="frame" x="284" y="340" width="80" height="80"/>
-                                <state key="normal" image="reverbButton"/>
-                                <connections>
-                                    <action selector="playReverb:" destination="o5N-l1-WpL" eventType="touchUpInside" id="pgH-II-FHB"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-Vs-eXM">
-                                <rect key="frame" x="182" y="443" width="50" height="50"/>
+                                <rect key="frame" x="182" y="463" width="50" height="50"/>
                                 <state key="normal" image="stopButton"/>
                                 <connections>
                                     <action selector="stopAllAudio:" destination="o5N-l1-WpL" eventType="touchUpInside" id="tyj-TF-SBJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhO-5E-gEo">
+                                <rect key="frame" x="274" y="340" width="100" height="100"/>
+                                <state key="normal" image="reverbButton"/>
+                                <connections>
+                                    <action selector="playReverb:" destination="o5N-l1-WpL" eventType="touchUpInside" id="pgH-II-FHB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,12 +139,12 @@
                             <constraint firstItem="VmS-fa-89C" firstAttribute="leading" secondItem="hD1-IV-vyb" secondAttribute="leadingMargin" constant="20" id="AYR-3b-XQt"/>
                             <constraint firstItem="FCL-C0-Gbz" firstAttribute="top" secondItem="V1i-cj-S7b" secondAttribute="bottom" constant="23" id="C7l-gB-uQR"/>
                             <constraint firstItem="ck2-z5-uEn" firstAttribute="top" secondItem="aet-vN-j8n" secondAttribute="bottom" constant="30" id="CZ3-Xv-KH3"/>
-                            <constraint firstItem="HCV-dT-Te6" firstAttribute="leading" secondItem="hD1-IV-vyb" secondAttribute="leadingMargin" constant="30" id="MQA-pe-0KN"/>
+                            <constraint firstItem="HCV-dT-Te6" firstAttribute="leading" secondItem="hD1-IV-vyb" secondAttribute="leadingMargin" constant="20" id="MQA-pe-0KN"/>
                             <constraint firstItem="V1i-cj-S7b" firstAttribute="top" secondItem="aet-vN-j8n" secondAttribute="bottom" constant="30" id="PSr-gp-cP5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FCL-C0-Gbz" secondAttribute="trailing" constant="20" id="Qry-zF-8lR"/>
                             <constraint firstItem="EmQ-Vs-eXM" firstAttribute="centerX" secondItem="hD1-IV-vyb" secondAttribute="centerX" id="RbV-oG-fQZ"/>
                             <constraint firstItem="ck2-z5-uEn" firstAttribute="leading" secondItem="hD1-IV-vyb" secondAttribute="leadingMargin" constant="20" id="ZTF-hl-yWr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dhO-5E-gEo" secondAttribute="trailing" constant="30" id="Zgy-xQ-i4S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dhO-5E-gEo" secondAttribute="trailing" constant="20" id="Zgy-xQ-i4S"/>
                             <constraint firstItem="dhO-5E-gEo" firstAttribute="top" secondItem="FCL-C0-Gbz" secondAttribute="bottom" constant="23" id="aEA-vx-1E3"/>
                             <constraint firstItem="VmS-fa-89C" firstAttribute="top" secondItem="ck2-z5-uEn" secondAttribute="bottom" constant="23" id="fBh-Rq-OMW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V1i-cj-S7b" secondAttribute="trailing" constant="20" id="tCM-pq-Fnb"/>
@@ -180,10 +180,10 @@
     <resources>
         <image name="chipmunkButton" width="100" height="100"/>
         <image name="darthvaderButton" width="100" height="100"/>
-        <image name="echoButton" width="80" height="80"/>
+        <image name="echoButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabbitButton" width="100" height="100"/>
-        <image name="reverbButton" width="80" height="80"/>
+        <image name="reverbButton" width="100" height="100"/>
         <image name="snailButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>
     </resources>

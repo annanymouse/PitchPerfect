@@ -40,8 +40,10 @@ class PlaySoundsViewController: UIViewController {
     func stopReset() {
         audioPlayer.stop()
         audioEngine.stop()
+        echoPlayer.stop()
         audioEngine.reset()
         audioPlayer.currentTime = 0
+        echoPlayer.currentTime = 0
     }
 
     func playAudioWithVariableSpeed(rate: Float) {
@@ -90,8 +92,6 @@ class PlaySoundsViewController: UIViewController {
         
         //stop and reset any running audio players
         stopReset()
-        echoPlayer.stop()
-        echoPlayer.currentTime = 0
         
         //set the delay effect
         let delay:NSTimeInterval = 0.5
