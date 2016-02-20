@@ -11,6 +11,7 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
+    var session: AVAudioSession!
     var audioPlayer:AVAudioPlayer!
     var echoPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
@@ -21,6 +22,8 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        session = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions: .DefaultToSpeaker)
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         echoPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
